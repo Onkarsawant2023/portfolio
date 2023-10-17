@@ -1,0 +1,204 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onkar Portfolio</title>
+
+  <!-- css files -->
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <!-- <link rel="stylesheet" href="css/newstyle.css?skk"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz@0,9..144;1,9..144&family=Tilt+Neon&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script src="js/site.js"></script> -->
+</head>
+
+<script>
+  $(document).ready(function() {
+    const words = [
+      "web",
+      "developer",
+      "frontend",
+    ];
+    let wordIndex = 0;
+
+    const changeWordWithAnimation = () => {
+      $("#random-word").fadeOut(50, function() {
+        wordIndex = (wordIndex + 1) % words.length;
+        $(this).text(words[wordIndex]);
+        $(this).fadeIn(50);
+      });
+    };
+
+    const interval = setInterval(changeWordWithAnimation, 250);
+
+    //   clearInterval(interval);
+  });
+</script>
+
+<body>
+  <div class="headTotalWrap">
+    <div class="headInnerWrap">
+      <!-- <div class="navWrapp">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </div> -->
+
+      <div class="contentWrap">
+        <div class="myName">onkar sawant</div>
+        <!-- <div class="designation">Fronend Web Developer</div> -->
+        <div class="banner-text" id="random-word">
+          Fronend
+        </div>
+        <div class="summary">
+          Experienced Front-End Developer with 2.2+ years of expertise in designing<br class="desk">
+          and building responsive websites in the music and entertainment industry.<br class="desk">
+          Proficient in HTML, CSS, and JavaScript, with a deep understanding of UX and user psychology.<br class="desk">
+          Successfully developed and enhanced more than 30+ websites using Drupal CMS,<br class="desk">
+          focusing on code quality and user experience.
+        </div>
+
+        <div class="tour-linker underline">
+          <a href="OnkarSResume.pdf" custom-link-name="Tour Link">HIRE ME</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- css -->
+
+<style>
+  body,
+  html,
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #000;
+    font-family: "Fraunces", serif;
+    font-family: "Tilt Neon", sans-serif;
+    color: #fff;
+    position: relative;
+  }
+
+  .myName {
+    color: #fff;
+    font-size: 10vw;
+    text-transform: uppercase;
+  }
+
+  .contentWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  .designation {
+    font-size: 3vw;
+    margin: 1vw auto;
+  }
+
+  .summary {
+    font-size: 1.5vw;
+    line-height: 2vw;
+    margin: 3vw auto;
+  }
+
+  .banner-text {
+    font-size: 5vw;
+    color: #07f51b;
+
+  }
+
+  .tour-linker a {
+    font-size: 1.7569546120058566vw;
+    letter-spacing: 0.01vw;
+    box-sizing: border-box;
+    color: #01c8f9;
+    /* border-bottom: 3px solid #fff; */
+    padding-bottom: 5.5px;
+  }
+
+  .underline a {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    color: #01c8f9;
+    padding: 0 1px;
+    transition: color ease 0.3s;
+  }
+
+  .underline a::before,
+  .underline a::after {
+    content: "";
+    position: absolute;
+    background-color: #01c8f9;
+    z-index: 1;
+    height: 7%;
+  }
+
+  .underline a::before {
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    transition: width ease 0.4s;
+  }
+
+  .underline a::after {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transition: all ease 0.6s;
+  }
+
+  .underline a:hover::before {
+    width: 100%;
+  }
+
+  .underline a:hover::after {
+    left: 100%;
+    width: 0%;
+    transition: all ease 0.2s;
+  }
+
+  @media screen and (max-width: 1024px) and (orientation: portrait) {
+    .myName {
+      font-size: 12vw;
+    }
+
+    .banner-text {
+      font-size: 10vw;
+    }
+
+    .summary {
+      font-size: 5vw;
+      line-height: 8vw;
+      margin: 6vw auto;
+    }
+
+    .desk {
+      display: none;
+    }
+
+    body {
+      margin: 5vw;
+    }
+
+    .tour-linker a {
+      font-size: 8vw;
+      letter-spacing: 0.01vw;
+    }
+  }
+</style>
